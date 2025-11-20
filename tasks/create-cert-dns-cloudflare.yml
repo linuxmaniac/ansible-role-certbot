@@ -5,7 +5,7 @@
 
 - name: Check if certificate already exists.
   stat:
-    path: /etc/letsencrypt/live/{{ cert_item.domains | first | replace('*.', '') }}/cert.pem
+    path: /etc/letsencrypt/live/{{cert_item_name}}/cert.pem
   register: letsencrypt_cert
   become: true
 
